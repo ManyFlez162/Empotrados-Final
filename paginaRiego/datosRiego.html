@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos del riego</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f7fb; /* Color de fondo */
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #007bff; /* Color de título */
+        }
+        .datos {
+            margin-bottom: 20px;
+        }
+        .datos label {
+            font-weight: bold;
+            color: #333; /* Color de texto normal */
+        }
+        .datos span {
+            color: #007bff; /* Color de texto resaltado */
+        }
+        .botones {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .botones button {
+            margin: 0 10px;
+            padding: 8px 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .botones button:hover {
+            background-color: #0056b3; /* Color de botón al pasar el ratón */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Datos del riego</h1>
+        <div class="datos">
+            <label for="nivelAgua">Nivel de agua:</label>
+            <span id="nivelAgua">90%</span>
+        </div>
+        <div class="datos">
+            <label for="humedadTierra">Humedad de tierra:</label>
+            <span id="humedadTierra">70%</span>
+        </div>
+        <div class="datos">
+            <label for="horaUltimoRiego">Hora último riego:</label>
+            <span id="horaUltimoRiego">10:30:45</span>
+        </div>
+        <div class="botones">
+            <button id="botonAtras">Atrás</button>
+            <button id="botonAdelante" disabled>Adelante</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("botonAtras").addEventListener("click", function() {
+            window.history.back();
+        });
+    </script>
+</body>
+</html>
